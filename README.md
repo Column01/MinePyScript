@@ -1,7 +1,9 @@
 # MinePyScript (WIP)
+
 A Spigot/Bungeecord plugin to provide python scripting for Minecraft Servers
 
 ## Introduction
+
 When working on minecraft servers, often there are things you'd like to do that require some level of scripting.
 
 I often find myself wishing there was an easy way to work with my servers to implement QOL features or simple things that otherwise would be frustrating to implement in Java. Things that otherwise don't require the entire spigot API, but you would like simple, (read only?) access to. 
@@ -9,6 +11,7 @@ I often find myself wishing there was an easy way to work with my servers to imp
 This project aims to be a solution to these problems.
 
 ## The Plan
+
 I'd like to implement a simple Python HTTP server using Flask that can take HTTP requests from the plugin and handle them in different ways.
 
 For example:
@@ -21,9 +24,23 @@ For example:
 7. The python server then forwards your handled event or command back to the Java server which will then execute whatever set of functions or commands you requested in your script.
 
 ## Challenges
+
 - How do you execute a python webserver in a way that respects Bungeecord/Spigot's "non reloadable" nature (while it is possible to reload, it is strongly discouraged)
 - How do you secure a system like this against potential attackers? (Likely some sort of key exchange should be made to ensure an attacker cannot intervene or run malicious code)
 - What is the best way to implement object serialization for sending through HTTP? Which side should do the brunt of the processing?
 - How do you distribute the Python library in an intelligent mannner that allows for easy development of scripts?
 - If Spigot/Bungeecord changes, what is the easiest way to implement these changes to my scripts?
 - By nature, python is dynamically typed whereas java is strictly typed. This could cause issues in conversion of objects from one language to another.
+
+## Todo list
+
+### Python
+- [ ] Implement basic HTTP server in Flask
+- [ ] Build class/file loading system for loading scripts
+- [ ] Create interfaces for various spigot/bungee things (like chat colors)
+- [ ] Work out a command structure for communicating with the Java Server
+
+### Java
+- [ ] Implement interfaces for command and event handlers
+- [ ] Build HTTP messaging system
+- [ ] Build command parser from HTTP request responses
