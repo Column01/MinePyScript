@@ -19,7 +19,6 @@ public class EventListenerBungee {
 
         // If we found an actual event class, then make sure to set the registered flag
         if (eventClass != null) {
-            registerEventListener();
             registered = true;
         }
     }
@@ -50,10 +49,6 @@ public class EventListenerBungee {
 
     public Class<?> getEventClass() {
         return eventClass;
-    }
-
-    public void registerEventListener() {
-
     }
 
     public boolean isRegistered() {
