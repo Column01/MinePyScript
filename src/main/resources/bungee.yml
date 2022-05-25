@@ -1,4 +1,5 @@
 name: MinePyScript
 version: '${version}'
-main: io.github.column01.minepyscript.BungeeCord.MinePyScript
+main: io.github.column01.minepyscript.BungeeCord.MinePyScriptBungee
 description: A Spigot/Bungeecord plugin to provide python scripting for Minecraft Servers
+author: Column01
