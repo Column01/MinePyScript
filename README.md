@@ -41,6 +41,9 @@ For example:
 - [ ] Work out a command structure for communicating with the Java Server
 
 ### Java
-- [ ] Implement interfaces for command and event handlers
+- [ ] Implement basic interfaces for command handler (Bungee)
+- [x] Implement basic interface for event listeners (Bungee)
+- [ ] Implement basic interfaces for command handler (Spigot)
+- [ ] Implement basic interface for event listeners (Spigot)
 - [ ] Build HTTP messaging system
 - [ ] Build command parser from HTTP request responses
