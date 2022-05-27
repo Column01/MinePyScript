@@ -27,8 +27,8 @@ public class EventListenerBungee {
 
         // If we found an actual event class, then make sure to set the registered flag
         if (eventClass != null) {
-            validEvent = true;
             eventHandlerClass = buildEventHandlerClass(eventClass);
+            validEvent = eventHandlerClass != null;
         }
     }
 
