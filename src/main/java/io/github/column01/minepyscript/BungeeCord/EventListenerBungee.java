@@ -65,7 +65,6 @@ public class EventListenerBungee {
             // Create the EventHandler annotation
             AnnotationsAttribute attr = new AnnotationsAttribute(constpool, AnnotationsAttribute.visibleTag);
             Annotation annot = new Annotation("net.md_5.bungee.event.EventHandler", constpool);
-            annot.addMemberValue("value", new IntegerMemberValue(ccFile.getConstPool(), 0));
             attr.addAnnotation(annot);
             mthd.getMethodInfo().addAttribute(attr);
             return cc.toClass();
